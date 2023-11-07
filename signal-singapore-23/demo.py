@@ -1,5 +1,4 @@
-## This is a server on port 3000 that exposes a single endpoint /inbound
-
+## This file is a Flask server on port 3000 that exposes a single endpoint /inbound
 
 
 from flask import Flask, request
@@ -22,13 +21,14 @@ auth_token = os.environ.get("AUTH_TOKEN")
 client = Client(account_sid, auth_token)
 lookup_client = TwilioLookupsClient(account_sid, auth_token)
 
+
 @app.route("/inbound", methods=["POST"])
 def handle_inbound():
     print("Received inbound message")
     twiml = MessagingResponse()
 
     from_number = request.form.get("From", "").replace("whatsapp:", "")
-    
+
     if from_number:
         try:
             lookup = lookup_client.phone_numbers(from_number).fetch(fields="sms_pumping_risk")
@@ -39,14 +39,16 @@ def handle_inbound():
 
     return str(twiml)
 
+
 @app.route("/log", methods=["POST"])
 def log():
     print("Tracked link clicked")
     return "OK"
 
+
 if __name__ == "__main__":
     print("Server is running on port 3000")
-    
+
     try:
         ngrok_tunnel = ngrok.connect(port, subdomain="mobert")
         print("Twilio webhook is live at", ngrok_tunnel.public_url)
