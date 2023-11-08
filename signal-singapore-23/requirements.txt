@@ -27,7 +27,7 @@ PyJWT==2.7.0
 PyNaCl==1.5.0
 python-dotenv==0.21.0
 pytz==2023.3
-requests==2.25.1
+requests==2.31.0
 six==1.16.0
 twilio==8.10.1
 urllib3==1.26.13
