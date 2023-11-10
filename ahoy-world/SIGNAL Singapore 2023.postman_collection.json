@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "27e51067-3168-45e6-bb06-afa13ba1aaf3",
+		"name": "SIGNAL Singapore 2023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4657867"
+	},
+	"item": [
+		{
+			"name": "Content Template Builder",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{TWILIO_AUTH_TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{TWILIO_ACCOUNT_SID}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "To",
+							"value": "{{DEV_PHONE_NUMBER}}",
+							"description": "Who we are sending a message to",
+							"type": "text"
+						},
+						{
+							"key": "From",
+							"value": "{{TWILIO_MSG_SERVICE}}",
+							"description": "Who this message is being sent from",
+							"type": "text"
+						},
+						{
+							"key": "ContentSid",
+							"value": "HXd8ea1b4f63d1b470afc1cbdf1a899612",
+							"description": "Content Template Builder SID",
+							"type": "text"
+						},
+						{
+							"key": "ContentVariables",
+							"value": "{\"0\": \"Anthony\", \"1\": \"https://twilio.com\", \"2\": \"Triple Chocolate\"}",
+							"description": "Variables passed through the Content Template Builder",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.twilio.com/2010-04-01/Accounts/{{TWILIO_ACCOUNT_SID}}/Messages.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"2010-04-01",
+						"Accounts",
+						"{{TWILIO_ACCOUNT_SID}}",
+						"Messages.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Content Template Builder DEMO",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{TWILIO_AUTH_TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{TWILIO_ACCOUNT_SID}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "To",
+							"value": "{{DEV_PHONE_NUMBER}}",
+							"description": "Who we are sending a message to",
+							"type": "text"
+						},
+						{
+							"key": "From",
+							"value": "{{TWILIO_MSG_SERVICE}}",
+							"description": "Who this message is being sent from",
+							"type": "text"
+						},
+						{
+							"key": "ContentSid",
+							"value": "",
+							"description": "Content Template Builder SID",
+							"type": "text"
+						},
+						{
+							"key": "ContentVariables",
+							"value": "{\"0\": \"Anthony\", \"1\": \"https://twilio.com\", \"2\": \"Triple Chocolate\"}",
+							"description": "Variables passed through the Content Template Builder",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.twilio.com/2010-04-01/Accounts/{{TWILIO_ACCOUNT_SID}}/Messages.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"2010-04-01",
+						"Accounts",
+						"{{TWILIO_ACCOUNT_SID}}",
+						"Messages.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

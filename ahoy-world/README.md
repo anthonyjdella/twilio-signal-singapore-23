@@ -8,3 +8,5 @@
 4. Open [partycookies.store/management](https://partycookies.store/management)
 5. Open Postman POST Request
     - Delete the `ContentSid`
+
+| Postman Collection is added in this directory `/ahoy-world`
