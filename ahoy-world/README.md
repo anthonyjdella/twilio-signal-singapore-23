@@ -10,3 +10,8 @@
     - Delete the `ContentSid`
 
 | Postman Collection is added in this directory `/ahoy-world`
+
+
+## What am I demoing?
+* Content Template builder in UI -> Postman Request
+* Bulk Sending API in **partycookies.store/management** and talk about **Send to All Subscribers**

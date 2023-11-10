@@ -169,13 +169,6 @@ These are code snippets for demos presented during the Developer Track at [SIGNA
     - Use the **subdomain option** and **CNAME**
     - In Namecheap, `CNAME RECORD` with host `link` `PASTE_SUBDOMAIN_RECORD_FROM_CONSOLE`
 
-
-TODO:
-- In Signal Singapore 2023 account, open the `Deep-Dive` Messaging Service then go to `Link Shortening`
-- Add domain `link.partycookies.store`
-- If already, added go to `Domains` and verify the domain
-- Add txt to DNS settings in Namecheap
-
 <details>
     <summary>Code Snippet for Link Shortening</summary>
 
