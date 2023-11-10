@@ -7,6 +7,17 @@ These are code snippets for demos presented during the Developer Track at [SIGNA
 
 1. Open the [Deck](https://docs.google.com/presentation/d/15kUrOvhqseMp2Nk7Nlmw9TGIHNrXIHj55Kk360_N9K0/edit?usp=sharing)
 2. Complete below [setup](#Setup) and make sure **Virtual Environment is active**
+3. Open Console -> Messaging Service **Leao DEMO** configure the **Integration**
+    - Then show **SMS Pumping Protection** in General Settings
+    - Then show **Quick Replies** in Content Template Builder
+4. Open Console -> Messaging Service **Signal Singapore 23** configure the **Link Shortening**
+    - Open the **Admin Console** and show a domain
+5. Open screenshot of DNS settings in **Namecheap**
+6. Open **Dev Phone**
+7. Open [partycookies.store/signup](partycookies.store/signup)
+    - Show the code in **signupActions.ts**
+8. Open [partycookies.store/management](partycookies.store/management)
+    - Show the code in **sendAction.ts**
 
 
 ## Setup
