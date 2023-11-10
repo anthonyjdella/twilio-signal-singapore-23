@@ -20,17 +20,23 @@ auth_token = os.getenv('TWILIO_AUTH_TOKEN')
 client = Client(account_sid, auth_token)
 
 
-@app.route("/inbound", methods=['GET', 'POST'])
+@app.route("/inbound", methods=['POST'])
 def singapore():
     twiml = MessagingResponse()
 
-    from_number = request.form.get("From", "").replace("whatsapp:", "")
+    from_number = request.values.get("From")
     lookup = client.lookups.v2.phone_numbers(from_number).fetch(fields="sms_pumping_risk")
 
-    number_score = lookup.sms_pumping_risk.sms_pumping_risk_score
+    number_score = lookup.sms_pumping_risk['sms_pumping_risk_score']
     twiml.message(f"Ahoy, your personal score is {number_score}")
 
     return str(twiml)
+
+
+@app.route("/log", methods=['GET', 'POST'])
+def track():
+    print(request.json)
+    return '', 200
 
 
 if __name__ == "__main__":
